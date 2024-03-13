@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Class and ID of Clicked Element</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  .highlight {
+    background-color: rgb(66, 229, 12);
+  }
+</style>
+</head>
+<body>
+
+<div id="element1" class="divclass">element 1</div>
+<div id="element2" class="divclass">element 2</div>
+<div id="element3" class="divclass">element 3</div>
+
+<script>
+$(document).ready(function() {
+  $(".divclass").click(function() {
+    // Get the class of the clicked element
+    var elementClass = $(this).attr("class");
+    
+    // Get the ID of the clicked element
+    var elementId = $(this).attr("id");
+    
+    // Output the class and ID of the clicked element
+    alert("Class: " + elementClass + "\nID: " + elementId);
+  });
+});
+</script>
+
+</body>
+</html>
